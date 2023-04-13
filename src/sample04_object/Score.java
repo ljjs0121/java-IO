@@ -6,6 +6,7 @@ public class Score implements Serializable {
 
 	private static final long serialVersionUID = -4403701983491175747L; // 객체를 식별할 수 있는 값
 	private String name;
+	private transient String password; // transient 직렬화 대상에서 제외시킬 수 있다.
 	private int grade;
 	private int kor;
 	private int eng;
@@ -20,6 +21,14 @@ public class Score implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public int getGrade() {

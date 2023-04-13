@@ -30,6 +30,7 @@ public class ObjectInputStreamApp {
 //		System.out.println("복원된 객체 -> " + obj);
 		Score score = (Score) in.readObject();
 		System.out.println("이름: " + score.getName());
+		System.out.println("비밀번호: " + score.getPassword());
 		System.out.println("학년: " + score.getGrade());
 		System.out.println("국어: " + score.getKor());
 		System.out.println("영어: " + score.getEng());

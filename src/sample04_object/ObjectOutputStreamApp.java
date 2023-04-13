@@ -10,6 +10,7 @@ public class ObjectOutputStreamApp {
 		
 		Score score = new Score();
 		score.setName("홍수아");
+		score.setPassword("zxcv1234");
 		score.setGrade(3);
 		score.setKor(100);
 		score.setEng(80);
