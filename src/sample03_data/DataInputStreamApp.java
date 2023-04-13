@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class DataInputStreamApp {
-
+// 저장된 값을 불러와서 출력
 	public static void main(String[] args) throws IOException {
 		/*
 		 * DataInputStream
@@ -29,7 +29,7 @@ public class DataInputStreamApp {
 		String path = "src/sample03_data/sample.sav";
 		DataInputStream in = new DataInputStream(new FileInputStream(path));
 		
-		// 값 복원
+		// 복원
 		String name = in.readUTF();
 		int grade = in.readInt();
 		int kor = in.readInt();
