@@ -1,5 +1,6 @@
 package util;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -12,7 +13,7 @@ public class DateUtils {
 	 * @param date 날짜
 	 * @return 지정된 포맷의 문자열
 	 */
-	public static String toText(Date date) {
+	public static String toText(Date date) { // 날짜 -> 문자열로
 		if (date == null) {
 			return "";
 		}
@@ -20,4 +21,19 @@ public class DateUtils {
 		return formattedText;
 	}
 	
+	/**
+	 * 날짜형식의 문자열을 {@code java.util.Date}로 변환해서 반환한다.
+	 * @param text 문자열
+	 * @return 날짜
+	 */
+	public static Date toDate(String text) { // 문자 -> 날짜열로
+		if (text == null) {
+			return null;
+		} 
+		try {
+			return YYYYMMDD.parse(text);
+		} catch (ParseException ex) {
+			throw new RuntimeException("["+text+"]", ex);
+		}
+	}
 }
